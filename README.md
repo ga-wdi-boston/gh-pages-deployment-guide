@@ -10,77 +10,39 @@ By the end of this, developers should be able to:
 
 ## Deployment Steps
 
-To start, indentify one member of your squad to be the 'project lead'. This
-person will create three new branches: `gh-pages`, `css`, and `html`; **CREATE
-THESE BRANCHES FROM THE MASTER BRANCH**. The 'project lead' will be the only
-squad member to code during the lab, everyone else will advise them what to
-code.
+These steps assume that work has been done on a `master` branch and is ready to
+be deployed.
 
-Then, check out the `html` branch and begin working there.
+1. Begin by creating a new branch called `gh-pages`
 
-1.  `grunt serve`
+```sh
+git branch gh-pages
+```
 
-  > `grunt serve` spins up a local server via Grunt. This local server allows
-  > us to work in a 'Development' environment to replicate what the 'Deployed'
-  > environment will  be like.
+1.  Ensure you are on your master branch.
 
-Once you finish writing your HTML, add the changes you've made to `index.html`
-and make a commit. Then, run the following commands:
+```sh
+git checkout master
+```
 
-1.  `git checkout master`
-
-  > Move to the master branch
-
-1.  `git merge html`
-
-  > Add the changes on the `html` branch to the `master` branch. Depending on
-  > what you've done, you may get a warning about a 'merge conflict' - if that
-  > happens, flag down one of the consultants.
-
-1.  `git push origin master`
-
-  > Push your updated `master` branch up to GitHub
-
-At this point, the `master` branch on your GitHub fork should include your new
-HTML page.
-
-Now checkout the `css` branch that you created earlier and style your site using
-the `main.css` file in the `assets/styles/` directory as follows. Don't worry
-about creating a link tag as the two script tags in the head of `index.html`
-take care of that for you.
-
--   Make the recipe title ("The Best Chocolate Chip Cookies") match [this shade
-of
-brown](http://en.wikipedia.org/wiki/Shades_of_brown#Chestnut), and make it
-larger than the rest of the text on the page.
--   The font for the whole page should be 'arial', except for the recipe title
-(which should be in 'cursive').
--   All text in the page should be centered.
--   In the ingredients list, give each ingredient a unique color; any time that
-ingredient appears in the recipe, make it that same color.
--   And feel free to experiment and add whatever else you want!
-
-Once you are finished styling your site, commit your changes and merge it with
-master like you did with your html branch
-
-1.  `git checkout master`
-
-1.  `git merge css`
-
-1.  `git push origin master`
+1.  And check that all updates on your `master` branch are committed and pushed
+ up to GitHub.
 
 The last thing we're going to do is **deploy** (i.e. host) this web page through
 a service that GitHub provides called GitHub pages. To do this, go through the
 following steps.
 
-1.  `git checkout gh-pages`
+1.  Move to the `gh-pages` branch that you created earlier.
 
-  > Move to the `gh-pages` branch that you created earlier.
+```sh
+git checkout gh-pages
+```
 
-1.  `git merge master`
+1.  Merge master `master` into `gh-pages`
 
-  > Add the new changes that have been made on `master` to the `gh-pages`
-  > branch on your local repo.
+```sh
+git merge master
+```
 
 1.  In your `.gitignore` file, comment out the lines `*bundle.js` and
 `vendor.js` so git no longer ignores those files e.g., `# *bundle.js`.
@@ -93,17 +55,16 @@ Alternatively you can remove those lines altogether.
   > This bundles your code and creates the bundle.js and vendor.bundle.js files
   > that you just un-ignored.
 
-1.  Now add and commit your code and run `git push origin gh-pages`
+1.  Now `add` and `commit` your code and run `git push origin gh-pages`
 
-  > This will push your code to github pages!
+  > This will push your code to GitHub Pages
 
-This process should add your HTML and CSS code to the `gh-pages` branch of your
-GitHub repo. Now, GitHub can work its magic and make that page visible on the
-web. If you go to the URL `yourUsername.github.io/html-css/` in your browser,
-you should be able to see your page!
+1.  Go to the URL `<your-username>.github.io/<repository-name>` in your browser,
+you should be able to see your page! If you don't, be patient. Sometimes, it takes up to 15 minutes for GH Pages to display your deployed page.
 
-  > As a general rule, the formula for a GitHub Pages URL is
-  > `your-username.github.io/repository-name/path-to-location-of-index.html`
+  > As a general rule, the formula for a GitHub Pages URL is:
+  >
+ `<your-username>.github.io/<repository-name/path-to-location-of-index.html>`
 
 
 ## Additional Resources
