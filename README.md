@@ -13,7 +13,7 @@ By the end of this, developers should be able to:
 These steps assume that work has been done on a `master` branch and is ready to
 be deployed.
 
-1. Begin by creating a new branch called `gh-pages`
+1.  Begin by creating a new branch called `gh-pages`
 
 ```sh
 git branch gh-pages
@@ -59,17 +59,16 @@ Alternatively you can remove those lines altogether.
 
   > This will push your code to GitHub Pages
 
-1.  Go to the URL `<your-username>.github.io/<repository-name>` in your browser,
-you should be able to see your page! If you don't, be patient. Sometimes, it takes up to 15 minutes for GH Pages to display your deployed page.
+1.  Go to the URL `<your-username>.github.io/<repository-name>` in your browser, you
+should be able to see your page! If you don't, be patient. Sometimes, it takes
+up to 15 minutes for GH Pages to display your deployed page.
 
   > As a general rule, the formula for a GitHub Pages URL is:
-  >
- `<your-username>.github.io/<repository-name/path-to-location-of-index.html>`
-
+  >`<your-username>.github.io/<repository-name/path-to-location-of-index.html>`
 
 ## Additional Resources
 
-- [GitHub Pages](https://pages.github.com/)
+-   [GitHub Pages](https://pages.github.com/)
 
 ## [License](LICENSE)
 
