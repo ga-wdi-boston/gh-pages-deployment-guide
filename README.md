@@ -15,15 +15,15 @@ be deployed.
 
 1.  Begin by creating a new branch called `gh-pages`
 
-```sh
-git branch gh-pages
-```
+    ```sh
+    git branch gh-pages
+    ```
 
 1.  Ensure you are on your master branch.
 
-```sh
-git checkout master
-```
+    ```sh
+    git checkout master
+    ```
 
 1.  And check that all updates on your `master` branch are committed and pushed
  up to GitHub.
@@ -34,15 +34,15 @@ following steps.
 
 1.  Move to the `gh-pages` branch that you created earlier.
 
-```sh
-git checkout gh-pages
-```
+    ```sh
+    git checkout gh-pages
+    ```
 
 1.  Merge master `master` into `gh-pages`
 
-```sh
-git merge master
-```
+    ```sh
+    git merge master
+    ```
 
 1.  In your `.gitignore` file, comment out the lines `*bundle.js` and
 `vendor.js` so git no longer ignores those files e.g., `# *bundle.js`.
