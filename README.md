@@ -66,6 +66,14 @@ up to 15 minutes for GH Pages to display your deployed page.
   > As a general rule, the formula for a GitHub Pages URL is:
   >`<your-username>.github.io/<repository-name/path-to-location-of-index.html>`
 
+## Wokflow rules
+
+1. NEVER work on the `master` branch.
+2. Merge `feature` branch onto `master` when your feature is done.
+3. Make `gh-pages` branch from `master`.
+4. Edit `.gitignore` ONLY on `gh-pages`.
+5. NEVER merge `gh-pages` into `master`.
+
 ## Additional Resources
 
 -   [GitHub Pages](https://pages.github.com/)
