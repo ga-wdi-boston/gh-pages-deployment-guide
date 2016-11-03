@@ -45,14 +45,14 @@ following steps.
     ```
 
 1.  In your `.gitignore` file, comment out the lines `*bundle.js` and
-`vendor.js` so git no longer ignores those files e.g., `# *bundle.js`.
+`dependencies.js` so git no longer ignores those files e.g., `# *bundle.js`.
 Alternatively you can remove those lines altogether.
 
   > This tells Git to no longer ignore those files so Git can track them.
 
 1.  Next run `grunt build`.
 
-  > This bundles your code and creates the bundle.js and vendor.bundle.js files
+  > This bundles your code and creates the bundle.js and dependencies.js files
   > that you just un-ignored.
 
 1.  Now `add` and `commit` your code and run `git push origin gh-pages`
