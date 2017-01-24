@@ -10,8 +10,8 @@ By the end of this, developers should be able to:
 
 ## Deployment Steps
 
-These steps assume that work has been done on a `master` branch and is ready to
-be deployed.
+These steps assume that work has been done on a `master` branch and is ready
+to be deployed.
 
 1.  Begin by creating a new branch called `gh-pages`
 
@@ -28,9 +28,9 @@ be deployed.
 1.  And check that all updates on your `master` branch are committed and pushed
  up to GitHub.
 
-The last thing we're going to do is **deploy** (i.e. host) this web page through
-a service that GitHub provides called GitHub pages. To do this, go through the
-following steps.
+The last thing we're going to do is **deploy** (i.e. host) this web page
+through a service that GitHub provides called GitHub pages. To do this, go
+through the following steps.
 
 1.  Move to the `gh-pages` branch that you created earlier.
 
@@ -59,9 +59,10 @@ Alternatively you can remove those lines altogether.
 
   > This will push your code to GitHub Pages
 
-1.  Go to the URL `<your-username>.github.io/<repository-name>` in your browser, you
-should be able to see your page! If you don't, be patient. Sometimes, it takes
-up to 15 minutes for GH Pages to display your deployed page.
+1.  Go to the URL `<your-username>.github.io/<repository-name>` in your
+browser, you should be able to see your page! If you don't, be patient.
+Sometimes, it takes up to 15 minutes for GH Pages to display your deployed
+page.
 
   > As a general rule, the formula for a GitHub Pages URL is:
   >`<your-username>.github.io/<repository-name/path-to-location-of-index.html>`
@@ -69,10 +70,10 @@ up to 15 minutes for GH Pages to display your deployed page.
 ## Wokflow rules
 
 1. NEVER work on the `master` branch.
-2. Merge `feature` branch onto `master` when your feature is done.
-3. Make `gh-pages` branch from `master`.
-4. Edit `.gitignore` ONLY on `gh-pages`.
-5. NEVER merge `gh-pages` into `master`.
+1. Merge `feature` branch onto `master` when your feature is done.
+1. Make `gh-pages` branch from `master`.
+1. Edit `.gitignore` ONLY on `gh-pages`.
+1. NEVER merge `gh-pages` into `master`.
 
 ## Additional Resources
 
