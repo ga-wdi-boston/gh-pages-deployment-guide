@@ -10,69 +10,29 @@ By the end of this, developers should be able to:
 
 ## Deployment Steps
 
-These steps assume that work has been done on a `master` branch and is ready to
-be deployed.
+If your work has been merged to a `master` branch, it is ready to be deployed.
 
-1.  Begin by creating a new branch called `gh-pages`
+From the `master` branch, and at the root of your project, run `grunt deploy`.
+If the working directory isn't clean, the deploy task will exit and show you
+the output of the `git status` command. To fix this, add and commit changes
+you wish to keep on the appropriate branch (most likely **not** `master`).
 
-    ```sh
-    git branch gh-pages
-    ```
+Go to the URL `<your-username>.github.io/<repository-name>` in your browser,
+you should be able to see your page! If you don't, be patient. Sometimes, it
+takes up to 15 minutes for GH Pages to display your deployed page.
 
-1.  Ensure you are on your master branch.
+As a general rule, the formula for a GitHub Pages URL is:
+`<your-username>.github.io/<repository-name>/path-to-location-of-index.html>`
 
-    ```sh
-    git checkout master
-    ```
+## Workflow Rules
 
-1.  And check that all updates on your `master` branch are committed and pushed
- up to GitHub.
-
-The last thing we're going to do is **deploy** (i.e. host) this web page through
-a service that GitHub provides called GitHub pages. To do this, go through the
-following steps.
-
-1.  Move to the `gh-pages` branch that you created earlier.
-
-    ```sh
-    git checkout gh-pages
-    ```
-
-1.  Merge master `master` into `gh-pages`
-
-    ```sh
-    git merge master
-    ```
-
-1.  In your `.gitignore` file, comment out the lines `*bundle.js` and
-`dependencies.js` so git no longer ignores those files e.g., `# *bundle.js`.
-Alternatively you can remove those lines altogether.
-
-  > This tells Git to no longer ignore those files so Git can track them.
-
-1.  Next run `grunt build`.
-
-  > This bundles your code and creates the bundle.js and dependencies.js files
-  > that you just un-ignored.
-
-1.  Now `add` and `commit` your code and run `git push origin gh-pages`
-
-  > This will push your code to GitHub Pages
-
-1.  Go to the URL `<your-username>.github.io/<repository-name>` in your browser, you
-should be able to see your page! If you don't, be patient. Sometimes, it takes
-up to 15 minutes for GH Pages to display your deployed page.
-
-  > As a general rule, the formula for a GitHub Pages URL is:
-  >`<your-username>.github.io/<repository-name/path-to-location-of-index.html>`
-
-## Wokflow rules
-
+1. Deploy early and often.
 1. NEVER work on the `master` branch.
-2. Merge `feature` branch onto `master` when your feature is done.
-3. Make `gh-pages` branch from `master`.
-4. Edit `.gitignore` ONLY on `gh-pages`.
-5. NEVER merge `gh-pages` into `master`.
+1. Merge `feature` branch onto `master` when your feature is done.
+1. `git push origin` every time you merge to `master`.
+1. `grunt deploy` every time you merge to `master`.
+1. Inspect your deployment in the browser.
+1. NEVER merge `gh-pages` into `master`.
 
 ## Additional Resources
 
@@ -80,5 +40,6 @@ up to 15 minutes for GH Pages to display your deployed page.
 
 ## [License](LICENSE)
 
-Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
