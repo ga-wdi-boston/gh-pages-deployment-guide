@@ -6,7 +6,7 @@
 
 By the end of this, developers should be able to:
 
--   Deploy a client application to GitHub Pages
+-   Deploy a client application to GitHub Pages.
 
 ## Deployment Steps
 
@@ -33,6 +33,16 @@ As a general rule, the formula for a GitHub Pages URL is:
 1. `grunt deploy` every time you merge to `master`.
 1. Inspect your deployment in the browser.
 1. NEVER merge `gh-pages` into `master`.
+
+## Deployment Commandments
+
+- `gh-pages` is not a replacement for grunt serve.
+
+- `gh-pages` is a production environment.
+
+- **NEVER** test code in production environments.
+
+- **ONLY**R deploy when code is verified as working.
 
 ## Additional Resources
 
