@@ -34,6 +34,10 @@ As a general rule, the formula for a GitHub Pages URL is:
 1. Inspect your deployment in the browser.
 1. NEVER merge `gh-pages` into `master`.
 
+## Deliverable
+
+- After deploying your site, paste the URL into the `url.md` file and open a Pull Request.
+
 ## Deployment Commandments
 
 - `gh-pages` is not a replacement for grunt serve.
