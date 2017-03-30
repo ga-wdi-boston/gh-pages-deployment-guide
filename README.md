@@ -42,7 +42,7 @@ As a general rule, the formula for a GitHub Pages URL is:
 
 - **NEVER** test code in production environments.
 
-- **ONLY**R deploy when code is verified as working.
+- **ONLY** deploy when code is verified as working.
 
 ## Additional Resources
 
